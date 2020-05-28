@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 400 14px Raleway, sans-serif!important;
+    background: #f0f0f5!important;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+input, button, textarea {
+    font: 400 18px Raleway, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+.logo {
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 80px;
+    max-height: 50px;
+}
+
+.header {
+    width: 100%;
+    max-width: 1120px;
+    height: 10vh;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.menu {
+    width: 100%;
+    max-width: 1120px;
+    height: 10vh;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.menu .btns {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.menu .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.table {
+    width: 100%!important;
+    max-width: 1120px!important;
+    height: 80vh!important;
+    margin: 0 auto!important;
+    
+    display: flex!important;
+    align-items: flex-start!important;
+    justify-content: space-evenly!important;
+}
+th {
+    font-weight: 700!important;
+    border: solid 1px #333333!important;
+    
+}
+.list-data {
+    border-bottom: solid 1px #333333!important;
+}
+.list-data td {
+    border-right: solid 1px #333333!important;
+}
+table {
+    border-collapse: collapse!important;
+    width:100%!important;
+    border:1px solid #333333!important;
+}
+
+.list-data:hover{
+    background: #5f5f5f;
+}
+a:active td{
+    background: #d3d3d3;
+    color: #000000;
+}
+
+.table table tr th:first-child {
+    padding: 1vh 7vh!important;
+}
+
+.table table tr th:nth-child(2) {
+    padding: 1vh 13vh!important;
+}
+
+.table table tr th:nth-child(3) {
+    padding: 1vh 13vh!important;
+}
+.table table tr th:nth-child(4) {
+    padding: 1vh 13vh!important;
+}
+.table table tr th:nth-child(5) {
+    padding: 1vh 7vh!important;
+}
+.table table tr td {
+    padding: 12px 0px!important;
+    text-align: center!important;
+}
+
+
+.btns button {
+	box-shadow: 0px 1px 6px 1px #8673d4;
+	background:linear-gradient(to bottom, #5854c9 5%, #6868f2 100%);
+	background-color:#5854c9;
+	border-radius:12px;
+	border:1px solid #6a92bd;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:7px 23px;
+    text-decoration:none;
+    margin: 0 15px;
+}
+.btns button:hover {
+	background:linear-gradient(to bottom, #6868f2 5%, #5854c9 100%);
+	background-color:#6868f2;
+}
+.btns button:active {
+	position:relative;
+	top:1px;
+}
+
+.search-btn button {
+    border-radius: 0px 10px 10px 0px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #333333;
+    border: none;
+}
+.search-btn button:active {
+    background: #5f5f5f;
+}
+
+.search-btn input {
+    position: relative;
+    right: 250px;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px 0px 0px 10px;
+    border: solid 1px #333333;
+    padding: 10px;
+}
+.container-form {
+    display: grid;
+	border-radius:12px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	padding:7px 23px;
+    text-decoration:none;
+    margin: 0 15px;
+
+}
+
+.container-form input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 1px #333;
+}
