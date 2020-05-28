@@ -1,0 +1,79 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="modal fade" id="modalzita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <form action="/" method="POST">
+                    <div class="modal-header">
+                        <h1>Cadastro de Peça</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-form">
+                            <input type="text" name="nome" placeholder="NOME DA PEÇA">
+                            <input type="text" name="fabricante" placeholder="FABRICANTE DA PEÇA">
+                            <input type="text" name="descricao" placeholder="DESCIÇÃO DA PEÇA">
+                            <input type="number" name="quantidade" placeholder="QUANTIDADE">
+                        </div>
+                    </div>
+                    <div class="modal-footer btns">
+                        <button>CADASTRAR</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        <div class="container-no">
+            <div class="header">
+                <img class="logo" src="/logo.png" alt="LogoSys">
+                <h2>Apptimus Prime</h2>
+            </div>
+            <div class="menu">
+                <div class="btns">
+                    <button  type="button" data-toggle="modal" data-target="#modalzita">Inserir</button>
+                    <button>Alterar</button>
+                    <button>Deletar</button>
+                </div>
+                <div class="search-btn">
+                    <button><input type="text" placeholder="Buscar Peça..."></button>
+                </div>
+            </div>
+            
+            <div class="table">
+                <table class="tool-list">
+                    <tr class="list-header" onclick='dadosPeca()'   >
+                        <th>Cód.</th>
+                        <th>Nome</th>
+                        <th>Fabricante</th>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                    </tr>
+                     <!--botar comando do bagulho lá postgres-->
+                    <div>
+                     {% for tools in tool %}
+                    <tr class="list-data" onclick='dadosPeca()'>
+                        <td>{{tools.id}}</td>
+                        <td>{{tools.nome}}</td>
+                        <td>{{tools.fabricante}}</td>
+                        <td>{{tools.descricao}}</td>
+                        <td>{{tools.quantidade}}</td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
